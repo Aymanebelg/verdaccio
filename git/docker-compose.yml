@@ -1,0 +1,19 @@
+version: '3'
+services:
+  verdaccio:
+    image: verdaccio/verdaccio
+    container_name: verdaccio
+    volumes:
+      - /home/linkopus/docker/verdaccio:/verdaccio
+    restart: always
+    ports:
+      - 4873:4873
+  portainer:
+    image: portainer/portainer-ce:latest
+    ports:
+      - 9443:9443
+    volumes:
+      - /home/linkopus/docker/portainer:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+   
