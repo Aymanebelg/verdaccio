@@ -12,13 +12,13 @@ uplinks:
 
 packages:
   '@/':
-    access: $authenticated
+    access: $all
     publish: $authenticated
     unpublish: $authenticated
     proxy: npmjs
 
   '**':
-    access: $authenticated
+    access: $all
     publish: $authenticated
     unpublish: $authenticated
     proxy: npmjs
