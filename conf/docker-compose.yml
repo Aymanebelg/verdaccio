@@ -5,7 +5,6 @@ services:
     container_name: verdaccio
     volumes:
       - /home/linkopus/verdaccio:/verdaccio
-      - ./conf:/verdaccio/conf
     restart: always
     ports:
       - 4873:4873
